@@ -13,7 +13,6 @@
 
 
 #include <iostream>
-#include <string>
 
 class smart_array
 {
