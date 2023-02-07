@@ -17,6 +17,8 @@
 class smart_array
 {
 public:
+	smart_array(const smart_array&) = delete;
+	smart_array& operator = (const smart_array&) = delete;
 	smart_array(int value);
 	~smart_array();
 	void add_element(int data);
@@ -45,7 +47,7 @@ void smart_array::add_element(int data)
 }
 int smart_array::get_element(int n)
 {
-	if (n > (value - 1))
+	if (n > (value - 1) || n < 0)
 	{
 		throw std::exception("There is no such index in the current array!");
 	}
